@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Amazon Clone</title>
+  <link rel="stylesheet" href="amazon.css">
+</head>
+
+<body>
+  <!-- Amazon-like Header -->
+  <header class="amazon-header" id="amazon-header" style="display: none;">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="logo-img">
+      <span class="logo-text">amazon</span><span class="logo-dot">.in</span>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search Amazon.in">
+      <button>🔍</button>
+    </div>
+    <div class="header-links">
+      <span>Hello, Sign in</span>
+      <span>Returns & Orders</span>
+      <span>Cart 🛒</span>
+    </div>
+  </header>
+
+  <!-- Login Section -->
+  <div id="login-page">
+    <form id="login-form">
+      <div class="login-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="logo-img"
+          style="width:150px;margin: auto;">
+          <br><br><br>
+      </div>
+      <input type="text" id="userid" placeholder="User ID" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit" style="width:200px;margin: auto;">Login</button>
+      <br><br>
+      <p>Use any of these accounts:</p>
+      <ul>
+        <li>john_doe / 123</li>
+        <li>jane_smith / 456</li>
+        <li>alex_tech / 789</li>
+        <li>sam_wilson / 1234</li>
+        <li>emma_white / 2023</li>
+      </ul>
+    </form>
+  </div>
+
+  <div id="main-page" style="display:none;">
+    <section>
+      <h2>Recommended Products</h2>
+      <div id="recommended-products"></div>
+    </section>
+    <section>
+      <h2>All Products</h2>
+      <div id="all-products"></div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('login-page').style.display = 'none';
+      document.getElementById('amazon-header').style.display = 'flex';
+      document.getElementById('main-page').style.display = 'block'; // Show products after login
+    });
+  </script>
+</body>
+
+</html>
