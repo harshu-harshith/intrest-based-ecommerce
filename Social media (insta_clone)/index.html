@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Clone</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="login-container" id="login-container">
+    <div class="login-box">
+      <h1 class="logo">Instagram</h1>
+      <form id="login-form">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Log In</button>
+      </form>
+      <div class="login-help">
+        <p>Use any of these accounts:</p>
+        <ul>
+          <li>john_doe / 123</li>
+          <li>jane_smith / 456</li>
+          <li>alex_tech / 789</li>
+          <li>sam_wilson / 1234</li>
+          <li>emma_white / 2023</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-container" id="app-container" style="display: none;">
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">Instagram</div>
+        
+        <div class="search-box">
+          <i data-lucide="search"></i>
+          <input type="text" placeholder="Search">
+        </div>
+        
+        <div class="nav-icons">
+          <i data-lucide="home"></i>
+          <i data-lucide="compass"></i>
+          <i data-lucide="heart"></i>
+          <div class="user-avatar" id="user-avatar"></div>
+        </div>
+      </div>
+    </nav>
+    
+    <main class="main-content">
+      <div class="container">
+        <div class="posts-container" id="posts-container">
+          <!-- Posts will be added here by JavaScript -->
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

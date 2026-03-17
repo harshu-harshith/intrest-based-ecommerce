@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fafafa;
+    color: #262626;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Login Screen */
+.login-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 12px 15px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+button {
+    background: #0095f6;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #0084d9;
+}
+
+.login-help {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #8e8e8e;
+}
+
+.login-help ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.login-help li {
+    margin-bottom: 5px;
+}
+
+/* Main App */
+.app-container {
+    padding-top: 60px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    border-bottom: 1px solid #dbdbdb;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 975px;
+}
+
+.search-box {
+    position: relative;
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .search-box {
+        display: flex;
+        align-items: center;
+        background: #efefef;
+        border-radius: 8px;
+        padding: 0 16px;
+        width: 215px;
+    }
+}
+
+.search-box i {
+    color: #8e8e8e;
+    width: 16px;
+    height: 16px;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 100%;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav-icons i {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.user-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+/* Posts */
+.main-content {
+    padding-top: 20px;
+}
+
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post {
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 14px;
+}
+
+.post-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+    background-size: cover;
+    background-position: center;
+}
+
+.post-user {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.post-actions {
+    display: flex;
+    padding: 8px 14px;
+    gap: 16px;
+}
+
+.post-actions i {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.post-likes {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0 14px;
+}
+
+.post-caption {
+    padding: 0 14px 8px;
+    font-size: 14px;
+}
+
+.post-username {
+    font-weight: 600;
+}
+
+.post-hashtags {
+    color: #00376b;
+    cursor: pointer;
+}
+
+.post-timestamp {
+    font-size: 10px;
+    color: #8e8e8e;
+    padding: 0 14px 14px;
+    text-transform: uppercase;
+}
+
+.liked {
+    color: #ed4956;
+    fill: #ed4956;
+}
+
+.bookmarked {
+    fill: #262626;
+}
